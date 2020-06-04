@@ -30,6 +30,8 @@ function processFirstItem(stringList, callback) {
  * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * The first example contains a closure, all the vaeriable are contained within. 
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
 */
@@ -56,11 +58,24 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning() {
 
-    /*Code Here*/
-
+  // var score = 0;
+  // for (let i = 0; i < repeat; i++) {
+    let score = Math.floor(3 * Math.random()); 
+    return score;
 }
+//         if (gameScore === 1) {
+//           console.log ("team 1");
+//         }
+//         if (gameScore === 0) {
+//           console.log ("team 2");
+//         }
+//       }
+//       return (score/repeat);
+//  }
+
+console.log(inning());
 
 /* Task 3: finalScore()
 
@@ -103,8 +118,25 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
-}
+function scoreBoard(innings) {
+  const score = [
+    "1st inning: 0 - 2",
+    "2nd inning: 1 - 3",
+    "3rd inning: 1 - 3",
+    "4th inning: 2 - 4",
+    "5th inning: 4 - 6",
+    "6th inning: 4 - 6",
+    "7th inning: 4 - 6",
+    "8th inning: 5 - 8",
+    "9th inning: 6 - 10",
+    "Final score : 6 -10",
+  ]
+  {
+   return scoreBoard(innings.score);
+  }
+  }
+
+
+console.log(scoreBoard[0]);
 
 

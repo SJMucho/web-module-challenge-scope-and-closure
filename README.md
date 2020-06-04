@@ -42,6 +42,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+The inner function will have access to the variables outside the funtion but we won't have access to data within the inner function.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -105,3 +108,4 @@ Follow these steps for completing your project.
 - [ ] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 - [ ] Add your Team Lead as a reviewer on the pull request
 - [ ] Your Team Lead will count the project as complete by merging the branch back into master
+##
