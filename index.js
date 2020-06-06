@@ -65,15 +65,6 @@ function inning() {
     let score = Math.floor(3 * Math.random()); 
     return score;
 }
-//         if (gameScore === 1) {
-//           console.log ("team 1");
-//         }
-//         if (gameScore === 0) {
-//           console.log ("team 2");
-//         }
-//       }
-//       return (score/repeat);
-//  }
 
 console.log(inning());
 
@@ -91,11 +82,18 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(score, innings){
+  let finalScore = {
+    "home": 0,
+    "away": 0,
+  } 
+  for (i=0; i<innings; i++) {
+    finalScore["home"] += score();
+    finalScore["away"] += score();
+  }
+  return finalScore;
 }
+console.log(finalScore());
 
 /* Task 4: 
 
@@ -117,26 +115,27 @@ and returns the score at each pont in the game, like so:
 9th inning: 6 - 10
 
 Final Score: 6 - 10 */
+// const score = [];
 
-function scoreBoard(innings) {
-  const score = [
-    "1st inning: 0 - 2",
-    "2nd inning: 1 - 3",
-    "3rd inning: 1 - 3",
-    "4th inning: 2 - 4",
-    "5th inning: 4 - 6",
-    "6th inning: 4 - 6",
-    "7th inning: 4 - 6",
-    "8th inning: 5 - 8",
-    "9th inning: 6 - 10",
-    "Final score : 6 -10",
-  ]
-  {
-   return scoreBoard(innings.score);
-  }
-  }
+// function scoreBoard(innings) {
+//   [
+//     "1st inning: 0 - 2",
+//     "2nd inning: 1 - 3",
+//     "3rd inning: 1 - 3",
+//     "4th inning: 2 - 4",
+//     "5th inning: 4 - 6",
+//     "6th inning: 4 - 6",
+//     "7th inning: 4 - 6",
+//     "8th inning: 5 - 8",
+//     "9th inning: 6 - 10",
+//     "Final score : 6 -10",
+//   ]
+//   {
+//    return score (innings);
+//   }
+//   }
 
 
-console.log(scoreBoard[0]);
+
 
 
