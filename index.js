@@ -28,11 +28,15 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * The variable is stored outside of example 2. Example one displays function scope.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
  * The first example contains a closure, all the vaeriable are contained within. 
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ * The first example would be useful to use as a callback. The 2nd would be useful if you needed to access counterMaker again in your code. 
  *
 */
 
@@ -60,13 +64,11 @@ Write a function called `inning` that generates a random number of points that a
 
 function inning() {
 
-  // var score = 0;
-  // for (let i = 0; i < repeat; i++) {
     let score = Math.floor(3 * Math.random()); 
     return score;
 }
 
-console.log(inning());
+console.log(inning(7));
 
 /* Task 3: finalScore()
 
@@ -82,18 +84,21 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(score, innings){
+function finalScore(score, inning){
   let finalScore = {
-    "home": 0,
-    "away": 0,
-  } 
-  for (i=0; i<innings; i++) {
+   home: 0,
+   away: 0
+}
+
+  for (i=0; i<inning; i++) {
     finalScore["home"] += score();
     finalScore["away"] += score();
   }
   return finalScore;
 }
-console.log(finalScore());
+
+ 
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
@@ -116,26 +121,22 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 // const score = [];
+  
 
-// function scoreBoard(innings) {
-//   [
-//     "1st inning: 0 - 2",
-//     "2nd inning: 1 - 3",
-//     "3rd inning: 1 - 3",
-//     "4th inning: 2 - 4",
-//     "5th inning: 4 - 6",
-//     "6th inning: 4 - 6",
-//     "7th inning: 4 - 6",
-//     "8th inning: 5 - 8",
-//     "9th inning: 6 - 10",
-//     "Final score : 6 -10",
-//   ]
-//   {
-//    return score (innings);
-//   }
-//   }
+function scoreBoard(score, inning) {
+  let scoreBoard = {
+    "home": 0,
+    "away": 0,
+  } 
+  for (i=0; i<inning; i++) {
+    scoreBoard["home"] += score();
+    scoreBoard["away"] += score();
+    console.log(finalScore);
+  }
+  // return: scoreBoard;
+}
 
-
+console.log(scoreBoard(inning));
 
 
 
