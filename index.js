@@ -133,10 +133,10 @@ function scoreBoard(score, inning) {
     scoreBoard["away"] += score();
     console.log(finalScore);
   }
-  // return: scoreBoard;
+   return scoreBoard
 }
 
-console.log(scoreBoard(inning));
+console.log(scoreBoard());
 
 
 
