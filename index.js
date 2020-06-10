@@ -136,7 +136,7 @@ function scoreBoard(teamScore, numInning) {
     // scoreBoard["away"] += score();
     // scoreBoard += inning();
     // console.log(finalScore);
-    console.log((i + 1) + "inning" + home + "-" + away);}
+    console.log((i + 1) + "inning " + home + "-" + away);}
   console.log(`final score ${home} ${away}`)
 
 }
