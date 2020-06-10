@@ -123,20 +123,22 @@ Final Score: 6 - 10 */
 // const score = [];
   
 
-function scoreBoard(score, inning) {
-  let scoreBoard = {
+function scoreBoard(teamScore, numInning) {
+  let score = {
     "home": 0,
     "away": 0,
   } 
-  for (i=0; i<inning; i++) {
-    scoreBoard["home"] += score();
-    scoreBoard["away"] += score();
-    console.log(finalScore);
+  for (let i = 0; i < numInning; i++) {
+    // scoreBoard["home"] += score();
+    // scoreBoard["away"] += score();
+    // scoreBoard += inning();
+    // console.log(finalScore);
+    console.log(`${i +1 } inning: ${scoreBoard.home += teamScore()} - ${scoreBoard.away += teamScore()}`);
   }
    return scoreBoard
 }
 
-console.log(scoreBoard());
+console.log(scoreBoard(inning, 9));
 
 
 
