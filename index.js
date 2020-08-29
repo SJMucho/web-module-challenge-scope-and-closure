@@ -28,9 +28,15 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * The variable is stored outside of example 2. Example one displays function scope.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * The first example contains a closure, all the vaeriable are contained within. 
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ * The first example would be useful to use as a callback. The 2nd would be useful if you needed to access counterMaker again in your code. 
  *
 */
 
@@ -56,11 +62,13 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning() {
 
-    /*Code Here*/
-
+    let score = Math.floor(3 * Math.random()); 
+    return score;
 }
+
+console.log(inning(7));
 
 /* Task 3: finalScore()
 
@@ -76,11 +84,21 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(score, inning){
+  let finalScore = {
+   home: 0,
+   away: 0
 }
+
+  for (i=0; i<inning; i++) {
+    finalScore["home"] += score();
+    finalScore["away"] += score();
+  }
+  return finalScore;
+}
+
+ 
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
@@ -102,9 +120,28 @@ and returns the score at each pont in the game, like so:
 9th inning: 6 - 10
 
 Final Score: 6 - 10 */
+// const score = [];
+  
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreBoard(teamScore, numInning) {
+  let home = 0;
+  let away = 0;
+
+  for (let i = 0; i < numInning; i++) {
+      let homePerInning = teamScore();
+      let awayPerInning = teamScore();
+      home += homePerInning;
+      away += awayPerInning;
+    // scoreBoard["home"] += score();
+    // scoreBoard["away"] += score();
+    // scoreBoard += inning();
+    // console.log(finalScore);
+    console.log((i + 1) + "inning " + home + "-" + away);}
+  console.log(`final score ${home} ${away}`)
+
 }
+
+scoreBoard(inning, 9);
+
 
 
